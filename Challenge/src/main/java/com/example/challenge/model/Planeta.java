@@ -1,13 +1,27 @@
 package com.example.challenge.model;
 
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Planeta {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false, updatable = false)
+    public Long id;
     private String nome;
     private String clima;
     private String terreno;
 
     public Planeta() {}
 
-    public Planeta(String nome, String clima, String terreno) {
+    public Planeta(Long id, String nome, String clima, String terreno) {
+        this.id = id;
         this.nome = nome;
         this.clima = clima;
         this.terreno = terreno;

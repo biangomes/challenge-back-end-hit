@@ -11,7 +11,6 @@ public interface PlanetaRepository extends JpaRepository<Planeta, Long> {
     @Query("SELECT p FROM Planeta p")
     List<Planeta> findAll();
 
+    @Query("SELECT p FROM Planeta p WHERE nome = :nome")
     Planeta findByNomePlaneta(String nome);
-
-    Integer insertPlaneta();
 }
