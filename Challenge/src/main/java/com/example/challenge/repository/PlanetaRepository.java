@@ -8,7 +8,10 @@ import java.util.List;
 
 public interface PlanetaRepository extends JpaRepository<Planeta, Long> {
 
+    @Query("SELECT p FROM Planeta p")
     List<Planeta> findAll();
 
     Planeta findByNomePlaneta(String nome);
+
+    Integer insertPlaneta();
 }
