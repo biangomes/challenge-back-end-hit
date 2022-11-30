@@ -35,3 +35,5 @@ build/
 ### MVN ###
 mvnw
 mvnw.cmd
+.mvn
+target
