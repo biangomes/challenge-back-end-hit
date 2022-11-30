@@ -7,11 +7,16 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface PlanetaRepository extends JpaRepository<Planeta, Long> {
+
+    // Listar planetas
     @Query("SELECT p FROM Planeta p")
     List<Planeta> findAll();
 
+    // Buscar por nome
     Planeta findByNomePlaneta(String nome);
 
-    @Query(value = "INSERT INTO Planeta (nome, clima, terreno) VALUES (:nome, :clima, :terreno)", nativeQuery = true)
-    Integer insertPlaneta(String nome, String clima, String terreno);
+    // Buscar por ID
+    @Query("SELECT p FROM Planeta p WHERE p.id = :id")
+    Planeta findById(int id);
+
 }

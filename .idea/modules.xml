@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Challenge/Challenge.iml" filepath="$PROJECT_DIR$/Challenge/Challenge.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/challenge-back-end-hit.iml" filepath="$PROJECT_DIR$/.idea/challenge-back-end-hit.iml" />
     </modules>
   </component>
